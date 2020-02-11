@@ -1,0 +1,245 @@
+.header {
+
+min-height: calc(100vh - var(--nav-height));
+height: 100%;
+border-left: 1px solid red;
+
+.mouse {
+    position: absolute;
+    left: -11px;
+    bottom: 100px;
+    opacity: .3;
+
+    @include respond(sm) {
+        display: none;
+    }
+}
+
+.scroll {
+    position: absolute;
+    left: -31px;
+    transform: rotate(-90deg);
+    bottom: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 1rem;
+}
+&:hover::after {
+    background: red;
+    box-shadow: 0 0 20px var(--color-light);
+}
+
+&::before {
+    content: "<Start />";
+    color: var(--color-light);
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    position: absolute;
+    top: -8px;
+    left: 30px;
+}
+
+&::after {
+    transition: all .4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    content: "";
+    position: absolute;
+    background: transparent;
+    left: 0;
+    top: -6px;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid rgba(var(--color-primary), 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    @include respond(sm) {
+        left: 2px;
+    }
+}
+
+
+
+&__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+&__intro {
+    min-height: 70rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond(sm) {
+        min-height: 64rem;
+    }
+
+
+    .intro-text {
+        padding: 4rem;
+        @include respond(sm) {
+            padding: 4rem 2rem;
+        }
+
+    }
+    .intro-btns {
+        padding: 4rem;
+
+        @include respond(sm) {
+            display: flex;
+            padding: 1.5rem;
+            a {
+                font-size: 2rem;
+            }
+        }
+    }
+ 
+
+
+    h1 {
+        font-size: 8rem;
+        font-weight: 900;
+        @include respond(sm) {
+            font-size: 6rem;
+            span {
+                font-size: 8rem;
+            }
+        }
+       span {
+           color: rgba(var(--color-primary), 1);
+           font-size: 10rem;
+       }
+    }
+
+    p {
+        font-size: 3rem;
+        font-weight: 900;
+        max-width: 50rem;
+        span {
+            color: rgba(var(--color-primary), 1);
+        }
+    }
+
+   
+}
+
+
+
+&__nav {
+
+    
+    ul {
+        border-left: 8px solid rgba(var(--color-primary), 1);
+        li {
+            padding-left: 3.2rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 0%;
+                height: 100%;
+                background: rgba(var(--color-primary), 1);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                transition: all .4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                z-index: -1;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+            
+            a {
+                color: var(--color-light);
+                font-size: 4rem;
+                font-weight: 900;
+                width: 100%;
+            }
+                 
+        }
+    }
+}
+
+
+
+
+
+&__graphics {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .profile-img {
+        width: 45rem;
+        height: 45rem;
+
+        @include respond(sm) {
+            display: none;
+        }
+    }
+
+    svg {
+        width: 50rem;
+        height: 50rem;
+        position: absolute;
+        left: -35rem;
+        bottom: 0rem;
+        @include respond(sm) {
+            position: static;
+            padding: 4rem;
+        
+        }
+    }
+
+
+    path {
+        animation: animateIcons 8s linear alternate-reverse infinite;
+    }
+
+    .markedIcon {
+        animation-delay: 1s;
+    }
+
+
+
+    .icon {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+
+        &--1 {
+            left: 0;
+            bottom: 0;
+        }
+        &--2 {
+            left: 0;
+            bottom: 5rem;
+        }
+
+    }
+}
+
+
+
+}
+
+
+@keyframes animateIcons {
+    to {
+        transform: scale(1.2) translate(1rem, 1rem);
+    }
+}
+@keyframes scaleHead {
+    to {
+        transform: scale(.9);
+    }
+}
+

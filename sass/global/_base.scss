@@ -1,0 +1,133 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    @include respond(xs) {
+        font-size: 30%;
+    }
+    @include respond(sm) {
+    font-size: 40%;
+    }
+    @include respond(xl) {
+        font-size: 47.5%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    // font-family: $font-primary;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    font-size: 1.6em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: 
+
+    url(../../assets/img/bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+ 
+
+    &::after {
+        content: "";
+        display: block;
+        width: .5rem;
+        height: var(--scroll-height);
+        background-color: rgba(var(--color-primary), 1);
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
+
+// navigation reset
+
+    ul {
+        list-style: none;
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    .goDown {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(230, 0, 76, 0.21) 0%,
+         rgba(196, 196, 196, 0) 100%);
+        border: 0;
+        padding: 2rem;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+        display: flex;
+
+        margin-bottom: -13rem;
+        z-index: 525;
+        height: 36rem;
+
+
+        &.goBack {
+            align-items: flex-start;
+            transform: rotate(180deg);
+            background: var(--color-secondary);
+
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:hover {
+            background: linear-gradient(to top, rgba(230, 0, 76, 0.21) 50%,
+            rgba(196, 196, 196, 0) 100%);
+        }
+    }
+    
+
+
+
+    .goBack {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        z-index: 2000;
+        
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s ease;
+    }
+
+    .fade-bottom {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    img {
+        transition: all 1s ease;
+    }
+
+

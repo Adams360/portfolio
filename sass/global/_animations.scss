@@ -1,0 +1,39 @@
+
+
+  @keyframes blink {
+    90% {
+      transform: none;
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateY(15px) scaleY(0)
+    }
+    100% {
+      animation-timing-function: ease-out;
+    }
+  }
+  @keyframes squeeze {
+    90% {
+      transform: none;
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateY(3px) scaleY(0.8)
+    }
+    100% {
+      animation-timing-function: ease-out;
+    }
+  }
+
+
+  @keyframes mage {
+    0% {
+      transform: translateY(0) scale(2);
+    }
+  
+    80% {
+      transform: translateY(5rem);
+      
+    }
+    
+  }

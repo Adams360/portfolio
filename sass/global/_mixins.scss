@@ -1,0 +1,42 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == xs {
+        @media only screen and (max-width: 380px) { @content }; 
+    }
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 576px) { @content }; 
+    }
+    @if $breakpoint == md {
+        @media only screen and (max-width: 768px) { @content };  
+    }
+    @if $breakpoint == lg {
+        @media only screen and (max-width: 992px) { @content };  
+    }
+    @if $breakpoint == xl {
+        @media only screen and (max-width: 1536px) { @content };
+    }
+}
+
+
+@mixin underline($side) {
+    &::after {
+        content: "";
+        min-width: 60rem;
+        height: .8rem;
+        background-color: rgba(var(--color-primary), 1);
+        display: block;
+        position: absolute;
+         @if $side == left {
+            left: 0;
+        }
+        
+
+        @if $side == center {
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1.5rem;
+        }
+    
+    }
+
+}
+

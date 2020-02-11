@@ -1,0 +1,26 @@
+.footer {
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+        font-size: 2rem;
+        color: var(--color-light);
+    }
+
+    a {
+        color: white;
+    }
+
+    .mage {
+        display: inline-block;
+        font-size: 4rem;
+        transform-origin: center;
+        padding-left: 2rem;
+        animation: mage 3s  ease infinite alternate-reverse;
+    }
+}
