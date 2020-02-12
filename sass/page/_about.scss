@@ -7,16 +7,16 @@ padding-top: 8rem;
 
 
 
-
 &::before {
     content: "";
     position: absolute;
     width: 100%;
     left: 0;
-    top: 13rem;
-    height: 15rem;
+    top: 12rem;
+    height: 22rem;
     background-color: var(--color-secondary);
     display: block;
+    
     @include respond(md) {
         height: 100%;
     }
@@ -28,7 +28,7 @@ padding-top: 8rem;
     &__stats {
         background-color: var(--color-darker);
         height: 100%;
-        margin-top: 22px;
+        margin-top: 18px;
         min-height: 50rem;
         display: flex;
         flex-direction: column;  

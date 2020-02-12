@@ -89,16 +89,19 @@ body {
         cursor: pointer;
         display: flex;
 
-        margin-bottom: -13rem;
+        margin-bottom: -12rem;
         z-index: 525;
         height: 36rem;
+img {
+    animation: arrow 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite alternate-reverse;
+
+}
 
 
         &.goBack {
             align-items: flex-start;
             transform: rotate(180deg);
             background: var(--color-secondary);
-
             visibility: hidden;
             opacity: 0;
         }
@@ -117,7 +120,6 @@ body {
         bottom: 2%;
         right: 2%;
         z-index: 2000;
-        
         visibility: hidden;
         opacity: 0;
         transition: all .4s ease;
@@ -126,6 +128,8 @@ body {
     .fade-bottom {
         visibility: visible;
         opacity: 1;
+        transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
     }
 
 

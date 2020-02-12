@@ -33,21 +33,7 @@ function scrollFunction() {
 
 
 let arrow = document.querySelector('.goDown');
-arrow.addEventListener('click', () => {
 
-
-    if(arrow.classList.contains('goBack')) {
-
-      arrow.setAttribute('href', '#home');
-
-      arrow.classList.remove('goBack');
-    } else {
-      arrow.setAttribute('href', '#about');
-
-      arrow.classList.add('goBack');
-    }
-
-})
 
 
 // #AdamS360S#2118
