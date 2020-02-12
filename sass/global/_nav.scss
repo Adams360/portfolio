@@ -6,6 +6,11 @@
     height: 100%;
 
     padding: 0 3rem;
+
+
+    @include respond(md) {
+        padding: 0 2rem;
+    }
     
     
     .icons {
@@ -13,6 +18,9 @@
 
         li {
             padding: 0 1rem;
+            @include respond(md) {
+                padding: 0 1.8rem;
+            }
             button {
                 background: none;
                 border: 0;
@@ -23,6 +31,10 @@
             img {
                 width: 2.8rem;
                 height: 2.8rem;
+                @include respond(md) {
+                    width: 3.1rem;
+                    height: 3.1rem;
+                }
             }
 
           
@@ -33,6 +45,10 @@
     .logo-img {
         width: 12rem;
         max-width: 100%;
+        @include respond(md) {
+            width: 14rem;
+
+        }
     
     }
 
