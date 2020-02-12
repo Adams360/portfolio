@@ -4,7 +4,7 @@
 
     .showcase {
         padding: 10rem;
-        @include respond(sm) {
+        @include respond(md) {
             padding: 4.5rem 5rem;
         }
 

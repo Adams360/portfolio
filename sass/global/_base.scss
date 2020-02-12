@@ -17,7 +17,7 @@ html {
     @include respond(sm) {
     font-size: 40%;
     }
-    @include respond(xl) {
+    @include respond(lg) {
         font-size: 47.5%;
     }
 }

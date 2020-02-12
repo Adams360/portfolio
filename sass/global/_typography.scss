@@ -9,7 +9,7 @@
     &--center {
         text-align: center;
         @include underline(center);
-        @include respond(sm) {
+        @include respond(md) {
             padding-left: initial;
         }
     }
@@ -30,7 +30,7 @@
         margin: 0 auto;
     }
 
-    @include respond(sm) {
+    @include respond(md) {
         font-size: 2.5rem;
     }
 }

@@ -4,7 +4,7 @@
     &__text-box {
         background-color: var(--color-fourth);
         padding: 6rem;
-        @include respond(sm) {
+        @include respond(md) {
             padding: 2.2rem;
         }
     }
@@ -24,7 +24,7 @@
         position: relative;
         font-size: 10px;
 
-        @include respond(sm) {
+        @include respond(md) {
             column-gap: 0;
         }
 
@@ -37,7 +37,7 @@
             transform: translate(-50%, -50%) rotate(90deg);
             border: 1px solid rgba(var(--color-primary), 1);
             
-            @include respond(sm) {
+            @include respond(md) {
                 border-color: rgba(var(--color-primary), .5);
                 width: 100%;
             }
@@ -87,7 +87,7 @@
         ul {
             font-size: 2em;
             line-height: 1.5;
-            @include respond(sm) {
+            @include respond(md) {
                 font-size: 1.1em;
             }
 

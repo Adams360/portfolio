@@ -58,7 +58,7 @@
             }
         }
 
-        @include respond(sm) {
+        @include respond(md) {
             padding: 4rem;
         }
 

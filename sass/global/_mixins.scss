@@ -9,10 +9,10 @@
         @media only screen and (max-width: 768px) { @content };  
     }
     @if $breakpoint == lg {
-        @media only screen and (max-width: 992px) { @content };  
+        @media only screen and (max-width: 1536px) { @content };  
     }
     @if $breakpoint == xl {
-        @media only screen and (max-width: 1536px) { @content };
+        @media only screen and (max-width: 1920px) { @content };
     }
 }
 
