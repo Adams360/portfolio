@@ -11,15 +11,18 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 
-    @include respond(xs) {
-        font-size: 30%;
-    }
-    @include respond(sm) {
-    font-size: 40%;
-    }
     @include respond(lg) {
         font-size: 47.5%;
     }
+
+    @include respond(sm) {
+    font-size: 40%;
+    }
+
+    @include respond(xs) {
+        font-size: 36%;
+    }
+
 }
 
 body {
