@@ -75,9 +75,7 @@ border-left: 1px solid red;
     justify-content: space-between;
     align-items: flex-start;
 
-    @include respond(md) {
-        min-height: 64rem;
-    }
+
 
 
     .intro-text {
@@ -96,6 +94,10 @@ border-left: 1px solid red;
             a {
                 font-size: 2.5rem;
             }
+        }
+
+        @include respond(sm) {
+            order: 2;
         }
     }
  
@@ -142,9 +144,18 @@ border-left: 1px solid red;
     
     ul {
         border-left: 8px solid rgba(var(--color-primary), 1);
+        @include respond(md) {
+            background-color: rgba(#000, .2);
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
         li {
             padding-left: 3.2rem;
             position: relative;
+
+            @include respond(md) {
+                padding: 1.5rem 3.2rem;
+            }
 
             &::before {
                 content: "";
@@ -155,7 +166,6 @@ border-left: 1px solid red;
                 position: absolute;
                 left: 0;
                 bottom: 0;
-
                 transition: all .4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
                 z-index: -1;
             }
@@ -193,6 +203,10 @@ border-left: 1px solid red;
         }
     }
 
+    @include respond(sm) {
+        position: static;
+    }
+
     svg {
         width: 50rem;
         height: 50rem;
@@ -200,9 +214,12 @@ border-left: 1px solid red;
         left: -35rem;
         bottom: 0rem;
         @include respond(md) {
-            position: static;
-            padding: 4rem;
-        
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            filter: opacity(0.1);
+            width: 60rem;
+            height: 58rem;
         }
     }
 

@@ -12,7 +12,11 @@ function myFunction() {
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 100;
 
-  root.style.setProperty('--scroll-height', scrolled + "%")
+ root.style.setProperty('--scroll-width', scrolled + "%")
+  if(scrolled < 0) {
+    root.style.setProperty('--scrollbar-color', '#e6004c');
+  }
+
 }
 
 function scrollFunction() {

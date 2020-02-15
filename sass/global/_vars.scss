@@ -13,6 +13,7 @@
     --nav-height: 7vh;
 
     --scroll-height: 10%;
+    --scrollbar-color: #fa0154;
 
     @include respond(sm) {
         --nav-height: 10vh;

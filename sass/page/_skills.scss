@@ -37,9 +37,12 @@
             transform: translate(-50%, -50%) rotate(90deg);
             border: 1px solid rgba(var(--color-primary), 1);
             
-            @include respond(md) {
+            @include respond(lg) {
                 border-color: rgba(var(--color-primary), .5);
-                width: 165%;
+                width: 100%;
+            }
+            @include respond(sm) {
+                width: 145%;
             }
         }
 

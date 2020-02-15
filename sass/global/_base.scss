@@ -47,12 +47,12 @@ body {
     &::after {
         content: "";
         display: block;
-        width: .5rem;
-        height: var(--scroll-height);
-        background-color: rgba(var(--color-primary), 1);
+        width: var(--scroll-width);
+        height: .5rem;
+        background-color: var(--scrollbar-color);
         position: fixed;
-        right: 0;
-        top: 0;
+        left: 0;
+        bottom: 0;
     }
 }
 
