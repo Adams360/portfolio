@@ -4,6 +4,11 @@ min-height: calc(100vh - var(--nav-height));
 height: 100%;
 border-left: 1px solid red;
 
+@include respond(sm) {
+min-height: calc(100vh - 15vh);
+
+}
+
 .mouse {
     position: absolute;
     left: -11px;
