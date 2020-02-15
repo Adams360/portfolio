@@ -5,7 +5,8 @@ height: 100%;
 border-left: 1px solid red;
 
 @include respond(sm) {
-min-height: calc(90vh - var(--nav-height));
+height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+height: calc(var(--vh, 1vh) * 100);
 
 }
 
