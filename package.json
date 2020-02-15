@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "node-sass sass/main.scss css/styles.css -w",
-    "minify": "node-sass css/styles.css css/styles.min.css --output-style compressed",
+    "minify": "node-sass css/styles.css css/style.min.css --output-style compressed",
     "build": "postcss -u autoprefixer -r css/*"
   },
   "author": "Adam Shaul",
