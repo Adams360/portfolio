@@ -78,6 +78,7 @@
             transition: all 0.3s;
             margin-top: -4px;
             font-weight: 700;
+            appearance: none;
 
             &:hover {
                 background: rgba(var(--color-primary), .8);

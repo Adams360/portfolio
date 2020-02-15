@@ -80,6 +80,10 @@ height: calc(var(--vh, 1vh) * 100);
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    @include respond(md) {
+    align-items: stretch;
+
+    }
 
 
 
