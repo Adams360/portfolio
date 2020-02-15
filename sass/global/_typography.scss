@@ -3,6 +3,7 @@
     font-weight: 900;
     padding-left: 4rem;
     position: relative;
+    z-index: 1000;
     @include underline(left);
 
 

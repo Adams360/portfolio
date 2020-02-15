@@ -5,7 +5,7 @@ height: 100%;
 border-left: 1px solid red;
 
 @include respond(sm) {
-min-height: calc(100vh - 15vh);
+min-height: calc(90vh - var(--nav-height));
 
 }
 
